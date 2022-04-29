@@ -3,7 +3,7 @@ import React from "react";
 export default function Card(props) {
     return(
     <div className="card">
-        <img src={`../images/${props.image}`}alt="Picture" className="location-image" />
+        <img src={`../images/${props.image}`}alt="location-img" className="location-image" />
         <div>
         <div className="card-stats">
             <img src="../images/Location.png" alt="Location-Icon" className="location-icon" />
