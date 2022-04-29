@@ -1,11 +1,24 @@
 import React from "react";
 import Navbar from "./components/Navbar.js";
-// import Data from "./Data.js"
+import Card from "./components/Card.js";
+import Data from "./Data.js";
 
 export default function App() {
-  return (
-    <div>
-      <Navbar />
-    </div>
-  );
+    const cards = Data.map(item => {
+        return (
+            <Card
+                key={item.id}
+                {...item}
+            />
+        )
+    });     
+    
+    return (
+        <div>
+            <Navbar />
+            <section className="card-list">
+                {cards}
+            </section>
+        </div>
+    );
 }
